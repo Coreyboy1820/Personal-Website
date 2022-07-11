@@ -1,0 +1,103 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .col {
+        display: inline-block;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h2,
+    h4 {
+        font-weight: 200;
+    }
+
+    #logInBox {
+        height: fit-content;
+        width: fit-content;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 15%;
+        margin-right: 5%;
+        border: solid;
+        border-color: rgb(218, 218, 218);
+        border-width: 2px;
+        border-radius: 10px;
+    }
+
+    #logInBoxFields {
+        height: 10%;
+        width: fit-content;
+        margin-top: 5%;
+        padding-top: 3%;
+    }
+
+    label {
+        margin-right: 6%;
+        font-size: larger;
+    }
+
+    #input {
+        border-radius: 5px;
+        border-color: rgba(163, 163, 163, 0.225);
+        height: 25;
+    }
+    .button {
+        margin-top: 10%;
+        margin-left: 2%;
+        margin-right: 4%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-left: solid;
+        border-right: solid;
+        border-radius: 5px;
+        border-color: rgb(218, 218, 218);
+        border-width: 1px;
+        height: fit-content;
+        width: fit-content;
+        font-size: larger;
+    }
+    .button:hover {
+        cursor: pointer;
+        background-color: rgb(239, 239, 239);
+    }
+</style>
+
+<div class="row" style="height:100%; text-align: center;">
+    <div class="col" name="logInBox" id="logInBox">
+        <form>
+            <div class="col">
+                <div class="row">
+                    <h2>Welcome to Corey's Website!</h2>
+                    <h4>Please Log In Below</h4>
+                </div>
+                <div class="row"  name="input" id="logInBoxFields" style="border-top: solid; border-width: 1px; border-color: rgb(218, 218, 218);">
+                    <label>First Name</label>
+                    <input type="text" name="firstNameInput" id="input">
+                </div>
+                <div class="row" name="input" id="logInBoxFields">
+                    <label>Last Name</label>
+                    <input type="text" name="LastNameInput" id="input">
+                </div>
+                <div class="row" name="input" id="logInBoxFields" style="margin-left: 6.5%;;">
+                    <label>EMail</label>
+                    <input type="text" name="eMailInput" id="input">
+                </div>
+                <div class="row">
+                    <div class="col button" name="cancel" id="logInBoxField">Cancel</div>
+                    <div class="col button" name="logIn" id="logInBoxField">Log In</div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $('[name="cancel"]').click(function(e) {
+        window.location.href = "/";
+    })
+});
+</script>
